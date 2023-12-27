@@ -2,7 +2,7 @@
 class Square:
     """
     Defines the properties of square by: (based on 3-square.py).
-    
+
     Attributes:
         size: size of a square (1 side)
     """
@@ -22,7 +22,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-         """sets the Property size.
+        """sets the Property size.
 
         Args:
             value (int): size of a square (1 side).
@@ -41,7 +41,7 @@ class Square:
         """Calculates the area of square.
 
         Returns: the current square area.
-        """    
+        """
         return (self.__size * self.__size)
 
     def __lt__(self, other):
@@ -57,7 +57,7 @@ class Square:
         return self.area() < other.area()
 
     def __le__(self, other):
-         """
+        """
          Compares if square area is less
         than or equal to another.
 
