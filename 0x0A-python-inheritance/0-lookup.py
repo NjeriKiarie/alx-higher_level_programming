@@ -7,5 +7,6 @@ and methods of an object:
     You are not allowed to import any module
 """
 
+
 def lookup(obj):
     return dir(obj)

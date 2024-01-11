@@ -3,6 +3,7 @@
 a class BaseGeometry (based on 6-base_geometry.py).
 """
 
+
 class BaseGeometry:
     """A class with public instance methods area and integer_validator"""
     def area(self):

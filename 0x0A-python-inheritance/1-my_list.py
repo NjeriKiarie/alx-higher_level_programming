@@ -8,6 +8,7 @@ You can assume that all the elements of the list will be of type int
 You are not allowed to import any module
 """
 
+
 class MyList(list):
 
     def __init__(self):
