@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 def read_file(filename=""):
-    """Read a file"""
+    """ function reads n prints lines of a text file (UTF8) prints it stdout """
 
-    with open(filename, mode="r", encoding="utf-8") as myfile:
-        print(myfile.read(), end="")
+    with open(filename) as f:
+        lines = f.read()
+    print(lines, end="")
+
