@@ -2,10 +2,11 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """the Square inherits from Rectangle"""
 
-    def __init__(self, size, x-0, y-0, id=None):
+    def __init__(self, size, x=0, y=0, id=None):
         super().__init__(width=size, height=size, x=x, y=y, id=id)
 
     @property
@@ -22,13 +23,14 @@ class Square(Rectangle):
     def __str__(self):
         """Returns formatted information display."""
 
-        return "[{}] ({}) {}/{} - {}".formart(self.__class__.__name__,
-                                            self.id, self.x, self.y,
-                                            self.width)
+        return "[{}] ({}) {}/{} - {}".format(
+                self.__class__.__name__,
+                self.id, self.x, self.y,
+                self.width)
 
     def update(self, *args, **kwargs):
         if len(kwargs) != 0:
-            for k,v in kwargs.items():
+            for k, v in kwargs.items():
                 setattr(self, k, v)
         elif len(args) != 0:
             try:
