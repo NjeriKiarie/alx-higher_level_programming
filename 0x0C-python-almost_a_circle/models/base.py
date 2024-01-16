@@ -2,18 +2,25 @@
 
 """
 Module for Base class
+implements `base` class of all other classes in this project.
+the goal is to manage id attribute in all your future classes
+and to avoid duplicates in the (by extension, same bugs)
 """
-from json import dumps, loads
+import json
 import csv
 
 
 class Base:
     """A representation of the base of our OOP hierarchy."""
-    
+
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
-        """Constructor."""
+        """Constructor.
+
+        Args:
+            id (int, optional): object id. Defaults to None.
+        """
         if id is not None:
             self.id = id
         else:
@@ -34,7 +41,8 @@ class Base:
 
         if type(json_string) != str or len(json_string) == 0:
             return []
-        return json.loads(json_string)
+        else:
+            return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
@@ -52,13 +60,13 @@ class Base:
     def save_to_file(cls, list_objs):
         """Writes to file with JSON string."""
 
-        with open(cls.__name__ + ".json", mode="w") as write_file:
-            if list_objs is None:
-                write_file.write("[]")
-            else:
-                # Using to_json_string(), and to_dictionary() to format
-                write_file.write(cls.to_json_string(
-                                 [item.to_dictionary() for item in list_objs]))
+        filename = cls.__name__ + ".json"
+        text = []
+        if list_objs is not None:
+            for lst in list_objs:
+                text.append(lst.to_dictionary())
+        with open(filename, mode="w", encoding="utf-8") as f:
+            return f.write(Base.to_json_string(text))
 
     @classmethod
     def load_from_file(cls):
