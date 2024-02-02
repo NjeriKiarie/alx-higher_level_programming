@@ -3,6 +3,6 @@
 def read_file(filename=""):
     """ function reads n prints lines of a text file"""
 
-    with open(filename) as f:
+    with open(filename, 'r', encoding="utf-8") as f:
         lines = f.read()
     print(lines, end="")
