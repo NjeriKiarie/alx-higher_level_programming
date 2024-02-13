@@ -10,4 +10,4 @@ def is_name_class(obj, a class):
     an instance of the specified class ; otherwise False.
     Prototype: def is_same_class(obj, a_class):
     """
-    return (type(obj) == a_class)
+    return type(obj) == a_class
