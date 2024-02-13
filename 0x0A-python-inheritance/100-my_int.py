@@ -3,6 +3,7 @@
 Module with a class Myint
 """
 
+
 class MyInt(int):
     """the class that inherits from int"""
 
@@ -31,7 +32,7 @@ class MyInt(int):
             return True
 
     def __ne__(self, other):
-            if self.my_int != other:
-                return False
-            else:
-                return True
+        if self.my_int != other:
+            return False
+        else:
+            return True
