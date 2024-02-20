@@ -6,7 +6,8 @@ using backtracking
 
 
 def isSafe(m_queen, nqueen):
-    """ The method that determines whether the queens can or can't kill each other
+    """
+    Method determines whether the queens can or can't kill each other
     Args:
         m_queen: array that has the queens positions
         nqueen: queen number
@@ -85,7 +86,7 @@ if __name__ == '__main__':
 
     try:
         size = int(sys.argv[1])
-    except:
+    finally:
         print("N must be a number")
         sys.exit(1)
 
