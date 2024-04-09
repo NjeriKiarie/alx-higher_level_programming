@@ -1,4 +1,4 @@
-#!/urs/bin/node
+#!/usr/bin/node
 // A square class that defines a square and inherits from Rectangel of 4-rectangle.js
 const Rectangle = require('./4-rectangle');
 
